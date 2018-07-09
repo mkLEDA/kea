@@ -30,6 +30,7 @@ int pkt4_receive(CalloutHandle& handle) {
         string hwaddr = hwaddr_ptr->toText();
         handle.setContext("hwaddr", hwaddr);
     }
+    std::cout << "Received request !!!" << std::endl;
     return (0);
 };
 }
