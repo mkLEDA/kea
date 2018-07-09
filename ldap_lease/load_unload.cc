@@ -6,14 +6,9 @@ using namespace isc::hooks;
 std::fstream interesting;
 extern "C" {
 int load(LibraryHandle&) {
-    interesting.open("/data/clients/interesting.log",
-                     std::fstream::out | std::fstream::app);
-    return (interesting ? 0 : 1);
+    return 0;
 }
 int unload() {
-    if (interesting) {
-        interesting.close();
-    }
     return (0);
 }
 }
